@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AquaLife | About</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h2>AquaLife</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="roles.html">Roles</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+  </ul>
+</nav>
+
+<section class="about-hero">
+  <div class="about-card">
+    <h1>About AquaLife</h1>
+    <p>
+      AquaLife is a smart water intake reminder system designed to help users
+      maintain healthy hydration habits through smart tracking and reminders.
+    </p>
+
+    <div class="about-features">
+
+     <button class="feature" onclick="openFeature('smart-tracking.html')">
+  Smart Tracking
+</button>
+
+<button class="feature" onclick="openFeature('daily-reminder.html')">
+  Daily Reminder
+</button>
+
+<button class="feature" onclick="openFeature('progress-view.html')">
+  Progress View
+</button>
+
+<button class="feature" onclick="openFeature('healthy-habits.html')">
+  Healthy Habits
+</button>
+
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE DETAILS -->
+
+<section class="feature-details">
+
+  <!-- SMART TRACKING -->
+  <div class="detail-box" id="smart">
+    <h2>Smart Tracking</h2>
+    <p>
+      Smart Tracking allows users to record their daily water intake accurately.
+      The system analyzes consumption patterns and helps users understand how
+      much water they drink throughout the day.
+    </p>
+    <ul>
+      <li>Tracks water intake in real time</li>
+      <li>Stores daily hydration data</li>
+      <li>Helps identify dehydration patterns</li>
+      <li>Improves overall health awareness</li>
+    </ul>
+
+    <img src="images/smart-tracking.png" alt="Smart Tracking">
+
+    <video controls>
+      <source src="videos/smart-tracking.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- DAILY REMINDER -->
+  <div class="detail-box" id="reminder">
+    <h2>Daily Reminder</h2>
+    <p>
+      Daily Reminder ensures users never forget to drink water by sending timely
+      alerts throughout the day based on their hydration goals.
+    </p>
+    <ul>
+      <li>Custom reminder intervals</li>
+      <li>Notification-based alerts</li>
+      <li>Prevents dehydration</li>
+      <li>Encourages discipline</li>
+    </ul>
+
+    <img src="images/daily-reminder.png" alt="Daily Reminder">
+
+    <video controls>
+      <source src="videos/daily-reminder.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- PROGRESS VIEW -->
+  <div class="detail-box" id="progress">
+    <h2>Progress View</h2>
+    <p>
+      Progress View visually represents daily, weekly, and monthly water intake
+      to help users track improvement over time.
+    </p>
+    <ul>
+      <li>Graph-based visualization</li>
+      <li>Daily & weekly summary</li>
+      <li>Goal comparison</li>
+      <li>Motivational feedback</li>
+    </ul>
+
+    <img src="images/progress-view.png" alt="Progress View">
+
+    <video controls>
+      <source src="videos/progress-view.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- HEALTHY HABITS -->
+  <div class="detail-box" id="habits">
+    <h2>Healthy Habits</h2>
+    <p>
+      Healthy Habits helps users develop long-term hydration routines that
+      positively impact energy levels, digestion, and overall wellness.
+    </p>
+    <ul>
+      <li>Builds consistent routines</li>
+      <li>Improves physical performance</li>
+      <li>Supports mental focus</li>
+      <li>Promotes a healthier lifestyle</li>
+    </ul>
+
+    <img src="images/healthy-habits.png" alt="Healthy Habits">
+
+    <video controls>
+      <source src="videos/healthy-habits.mp4" type="video/mp4">
+    </video>
+  </div>
+
+</section>
+
+<script src="js/about.js"></script>
+
+<script>
+function toggleFeature(id) {
+  const boxes = document.querySelectorAll('.detail-box');
+
+  boxes.forEach(box => {
+    if (box.id === id) {
+      box.style.display =
+        box.style.display === 'block' ? 'none' : 'block';
+    } else {
+      box.style.display = 'none';
+    }
+  });
+}
+</script>
+
+<script>
+function openFeature(page) {
+  window.open(page, "_blank");
+}
+</script>
+
+
+
+</body>
+</html>

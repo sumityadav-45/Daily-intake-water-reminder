@@ -1,0 +1,409 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43);
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(145deg, #00c6ff, #0072ff);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* HERO SECTION */
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url("https://www.bjc.org/sites/bjc/files/images/2024-02/Person-drinking-water-outdoor.webp"); /* uploaded image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark overlay for text readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* adjust opacity for contrast */
+  z-index: 0;
+}
+
+/* Card above overlay */
+/* Card Glass Effect */
+.card3d {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.15); /* transparent */
+  backdrop-filter: blur(10px); /* blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  color: #fff; /* white text for contrast */
+  padding: 50px 40px;
+  width: 350px;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18); /* subtle border */
+  transition: 0.5s;
+}
+
+.card3d h1 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #e0f7ff; /* light blue for better visibility */
+}
+
+.card3d p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ccefff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #00c6ff; /* match hero theme */
+  color: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0072ff;
+  transform: translateY(-3px);
+}
+
+
+
+.dashboard {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-card {
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+  transition: 0.4s;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Circular Progress */
+.circle {
+  width: 160px;
+  height: 160px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: conic-gradient(#00c6ff 0%, #ffffff 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.page-title {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 32px;
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.role-card {
+  background: linear-gradient(145deg, #ffffff, #dcdcdc);
+  color: #333;
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.role-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+/* ABOUT SECTION */
+.about-hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43);
+}
+
+.about-card {
+  width: 75%;
+  max-width: 800px;
+  padding: 50px;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+
+  text-align: center;
+}
+
+.about-card h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #e9faff;
+}
+
+.about-card p {
+  font-size: 17px;
+  margin-bottom: 15px;
+  color: #d6f3ff;
+  line-height: 1.6;
+}
+
+/* FEATURES */
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.feature {
+  padding: 12px;
+  background: #00bcd4;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.feature:hover {
+  background: #0097a7;
+}
+
+.feature-details {
+  padding: 40px;
+}
+
+.detail-box {
+  display: none;
+  background: #f9f9f9;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.detail-box img,
+.detail-box video {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+
+.feature-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+}
+
+.feature-page h1 {
+  color: #0097a7;
+  margin-bottom: 15px;
+}
+
+.feature-page ul {
+  margin: 15px 0;
+}
+
+.feature-page ul li {
+  margin-bottom: 8px;
+}
+
+.feature-page img,
+.feature-page video {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+
+/* ====== GLOBAL RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4f9fb;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  background: #0097a7;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* ====== MAIN PAGE CARD ====== */
+.feature-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ====== HEADINGS ====== */
+.feature-page h1 {
+  font-size: 34px;
+  color: #0097a7;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.feature-page h2 {
+  margin-top: 30px;
+  margin-bottom: 12px;
+  color: #007c91;
+  font-size: 24px;
+}
+
+/* ====== TEXT ====== */
+.feature-page p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* ====== LIST STYLE ====== */
+.feature-page ul {
+  margin: 15px 0 20px 25px;
+}
+
+.feature-page ul li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* ====== HORIZONTAL LINE ====== */
+.feature-page hr {
+  border: none;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 30px 0;
+}
+
+/* ====== IMAGES ====== */
+.feature-page img {
+  width: 100%;
+  max-width: 650px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* ====== VIDEO ====== */
+.feature-page video {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 25px auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ====== HIGHLIGHT BOX ====== */
+.feature-page strong {
+  color: #0097a7;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .feature-page {
+    padding: 25px;
+    margin: 20px;
+  }
+
+  .feature-page h1 {
+    font-size: 26px;
+  }
+
+  .feature-page h2 {
+    font-size: 20px;
+  }
+}

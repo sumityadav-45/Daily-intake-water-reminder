@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AquaLife | Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR (same as index.html) -->
+<nav class="navbar">
+  <h2> AquaLife</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="roles.html">Roles</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<!-- DASHBOARD -->
+<section class="dashboard">
+  <div class="glass-card">
+    <h2>Your Daily Water Goal</h2>
+
+    <div class="circle">
+      
+      <span id="percent">0%</span>
+    </div>
+    
+
+
+    <p id="status">0 / 3 Liters</p>
+  
+
+    <button onclick="drinkWater()">Drink 250ml </button>
+    <button class="reset-btn" onclick="resetWater()">
+   Reset Water
+</button>
+  </div>
+  
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>
